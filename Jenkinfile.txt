@@ -10,12 +10,29 @@ pipeline {
             }
         }
 
-        stage('TEST') {
+        stage('TEST1') {
             steps{
                 sh '''
                     sleep 6
                     echo "This is a TEST stage"
                 '''
+            }
+        }
+        stage('TEST2') {
+            steps{
+                sh '''
+                    sleep 6
+                    echo "This is a TEST2 stage"
+                '''
+            }
+        }
+        stage('TEST3') {
+            steps{
+                sh '''
+                    sleep 6
+                    echo "This is a TEST3 stage"
+                '''
+                
             }
         }
 
@@ -24,7 +41,6 @@ pipeline {
                 sh '''
                     sleep 5
                     echo "This is a DEPLOY stage"
-                    exit 1
                 '''
             }
         }
