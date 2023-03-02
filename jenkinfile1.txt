@@ -6,9 +6,7 @@ piepline {
                 branch 'master'
             }
             steps{
-                   sh '''
-                    sleep 5
-                "echo STEGE-2 executes if branch is master"
+                sh "echo STEGE-2 executes if branch is master"
             }
         }
 
@@ -16,11 +14,8 @@ piepline {
             when {
                 branch 'master'
             }
-            steps{ 
-                 sh '''
-                    sleep 5
-
-                 "echo STEGE-2 executes if branch is master"
+            steps{
+                sh "echo STEGE-2 executes if branch is master"
             }
         }
     }
