@@ -6,7 +6,7 @@ pipeline {
                 branch 'master'
             }
             steps{
-                "echo STEGE-2 executes if branch is master"
+                "echo STAGE-2 executes if branch is master"
             }
         }
 
