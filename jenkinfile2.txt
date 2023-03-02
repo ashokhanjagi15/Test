@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages{
+        stage('Step1') {
+            when {
+                expression { env.BRANCH_NAME != 'master'}
+                }
+            steps {
+                echo "Run this stage - ony if the branch is not main"
+                }
+}
+}
+}
