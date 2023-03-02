@@ -3,7 +3,7 @@ piepline {
     stages {
         stage('STAGE-1') {
             when {
-                branch 'master'
+                expression { env.BRANCH_NAME != 'master'}
             }
             steps{
                 sh "echo STEGE-2 executes if branch is master"
@@ -12,7 +12,7 @@ piepline {
 
         stage('STAGE-2'){
             when {
-                branch 'master'
+                expression { env.BRANCH_NAME != 'master'}
             }
             steps{
                 sh "echo STEGE-2 executes if branch is master"
