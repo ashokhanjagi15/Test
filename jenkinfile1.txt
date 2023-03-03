@@ -1,5 +1,9 @@
 pipeline {
     agent any 
+     parameters {
+        choice(name: 'BRANCH_NAME', choices: ['master', 'branch1'], description: 'Enter branch name to execute ?')
+    }
+    
     stages {
         stage('STAGE-1') {
             when {
