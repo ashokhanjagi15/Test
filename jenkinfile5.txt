@@ -1,3 +1,4 @@
+def boolean stage_result = false
 pipeline {
     agent any 
     stages {
